@@ -18,10 +18,10 @@
   --btn-default-hover-bg: #222;
   --btn-default-hover-color: #fff;
   --btn-default-hover-border-color: #222;
-  --highlight-background: #f3f3f3;
-  --highlight-foreground: #444;
-  --highlight-gutter-background: #e1e1e1;
-  --highlight-gutter-foreground: #555;
+  --highlight-background: #282c34;
+  --highlight-foreground: #abb2bf;
+  --highlight-gutter-background: #353941;
+  --highlight-gutter-foreground: #9da4b1;
   color-scheme: light;
 }
 html {
@@ -365,47 +365,111 @@ td {
   top: -6px;
   transform: rotate(-45deg);
 }
-pre[class*="language-"].line-numbers {
-	position: relative;
-	padding-left: 3.8em;
-	counter-reset: linenumber;
+pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
 }
-
-pre[class*="language-"].line-numbers > code {
-	position: relative;
-	white-space: inherit;
+code.hljs {
+  padding: 3px 5px
 }
+/*
 
-.line-numbers .line-numbers-rows {
-	position: absolute;
-	pointer-events: none;
-	top: 0;
-	font-size: 100%;
-	left: -3.8em;
-	width: 3em; /* works for line-numbers below 1000 lines */
-	letter-spacing: -1px;
-	border-right: 1px solid #999;
+Atom One Dark With support for ReasonML by Gidi Morris, based off work by Daniel Gamage
 
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
 
+*/
+.hljs {
+  color: #abb2bf;
+  background: #282c34
 }
-
-	.line-numbers-rows > span {
-		display: block;
-		counter-increment: linenumber;
-	}
-
-		.line-numbers-rows > span:before {
-			content: counter(linenumber);
-			color: #999;
-			display: block;
-			padding-right: 0.8em;
-			text-align: right;
-		}
-
+.hljs-keyword,
+.hljs-operator {
+  color: #F92672
+}
+.hljs-pattern-match {
+  color: #F92672
+}
+.hljs-pattern-match .hljs-constructor {
+  color: #61aeee
+}
+.hljs-function {
+  color: #61aeee
+}
+.hljs-function .hljs-params {
+  color: #A6E22E
+}
+.hljs-function .hljs-params .hljs-typing {
+  color: #FD971F
+}
+.hljs-module-access .hljs-module {
+  color: #7e57c2
+}
+.hljs-constructor {
+  color: #e2b93d
+}
+.hljs-constructor .hljs-string {
+  color: #9CCC65
+}
+.hljs-comment,
+.hljs-quote {
+  color: #b18eb1;
+  font-style: italic
+}
+.hljs-doctag,
+.hljs-formula {
+  color: #c678dd
+}
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e06c75
+}
+.hljs-literal {
+  color: #56b6c2
+}
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #98c379
+}
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #e6c07b
+}
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #d19a66
+}
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #61aeee
+}
+.hljs-emphasis {
+  font-style: italic
+}
+.hljs-strong {
+  font-weight: bold
+}
+.hljs-link {
+  text-decoration: underline
+}
 .highlight:hover .copy-btn,
 .code-container:hover .copy-btn {
   opacity: 1;
